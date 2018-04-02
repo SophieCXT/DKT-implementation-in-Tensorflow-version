@@ -13,7 +13,7 @@ print(input_dim_order)
 epoch = 10
 hidden_layer_size = 512
 keep_prob=1.0 #here the default keep_prob is 1.0
-net=models.DKTnet(input_dim,input_dim_order,hidden_layer_size,keep_prob,dataLongest)
+net=models.DKTnet(input_dim,input_dim_order,hidden_layer_size,keep_prob,dataLongest-1)
 
 with tf.Session() as sess:
     #training

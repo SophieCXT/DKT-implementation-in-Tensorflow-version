@@ -67,9 +67,14 @@ class DataReader:
             x_train.append(x_single_train)
             y_train.append(y_single_train.reshape((data.longest)))
             y_train_order.append(y_single_train_order)
-        self.x_train=np.array(x_train)
-        self.y_train=np.array(y_train)
-        self.y_train_order=np.array(y_train_order)
+            
+            
+            self.x_train=np.array(x_train)
+            self.x_train=self.x_train[:,:-1,:]
+            self.y_train=np.array(y_train)
+            self.y_train=self.y_train[:,1:]
+            self.y_train_order=np.array(y_train_order)
+            self.y_train_order=self.y_train_order[:,1:,:]
 
     def next_train_batch(self,batch_size):
         end=int(len(self.x_train)*self.validation_split)

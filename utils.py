@@ -2,7 +2,8 @@
 
 # to get information from the csv, and utilize generator
 def getInfo(csvInput):
-        
+    
+    
     # in csv, every 3 row is a unit including studentID, questionSet, and resultSet(correct = 1 wrong = 0)  
     for row in csvInput:
         # nStep, questionsID, correct = yield(line)
